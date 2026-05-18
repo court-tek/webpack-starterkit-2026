@@ -1,4 +1,5 @@
-  import { h, text, app } from "hyperapp"
+  import { h, text, app } from "hyperapp";
+  import "../../styles/main.scss";
 
   const AddTodo = (state) => ({
     ...state,
