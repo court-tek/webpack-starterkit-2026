@@ -1,27 +1,18 @@
   import { h, text, app } from "hyperapp";
+  import { globalState } from "./state/globalState.js";
+  import TaskList from "./components/todoapp.js";
   import "../../styles/main.scss";
 
-  const AddTodo = (state) => ({
-    ...state,
-    value: "",
-    todos: state.todos.concat(state.value),
-  })
-
-  const NewValue = (state, event) => ({
-    ...state,
-    value: event.target.value,
-  })
+  const state = {
+    name: "courtney"
+  }
 
   app({
-    init: { todos: [], value: "" },
-    view: ({ todos, value }) =>
+    init: globalState,
+    view: state =>
       h("main", {}, [
-        h("h1", {}, text("To do list")),
-        h("input", { type: "text", oninput: NewValue, value }),
-        h("ul", {},
-          todos.map((todo) => h("li", {}, text(todo)))
-        ),
-        h("button", { onclick: AddTodo }, text("New!")),
+        TaskList(state),
+        console.log()
       ]),
     node: document.querySelector(".app"),
   })

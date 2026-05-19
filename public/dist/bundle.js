@@ -110,13 +110,43 @@ eval("{\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleEle
 
 /***/ },
 
+/***/ "./assets/js/hyper/actions/index.js"
+/*!******************************************!*\
+  !*** ./assets/js/hyper/actions/index.js ***!
+  \******************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   AddTodo: () => (/* binding */ AddTodo),\n/* harmony export */   NewValue: () => (/* binding */ NewValue)\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }\nfunction _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }\nfunction _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nfunction test(name) {\n  return function (data) {\n    return \"\".concat(name, \" \").concat(data);\n  };\n}\n\n// Todo App actions\nvar AddTodo = function AddTodo(state) {\n  return _objectSpread(_objectSpread({}, state), {}, {\n    value: \"\",\n    todos: state.todos.concat(state.value)\n  });\n};\nvar NewValue = function NewValue(state, event) {\n  return _objectSpread(_objectSpread({}, state), {}, {\n    value: event.target.value\n  });\n};\n\n// export default aSentence = test('courtney');\n\n//# sourceURL=webpack://webpack-kit-2026/./assets/js/hyper/actions/index.js?\n}");
+
+/***/ },
+
 /***/ "./assets/js/hyper/app.js"
 /*!********************************!*\
   !*** ./assets/js/hyper/app.js ***!
   \********************************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var hyperapp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hyperapp */ \"./node_modules/hyperapp/index.js\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/main.scss */ \"./assets/styles/main.scss\");\n\n\nconst AddTodo = state => ({\n  ...state,\n  value: \"\",\n  todos: state.todos.concat(state.value)\n});\nconst NewValue = (state, event) => ({\n  ...state,\n  value: event.target.value\n});\n(0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.app)({\n  init: {\n    todos: [],\n    value: \"\"\n  },\n  view: ({\n    todos,\n    value\n  }) => (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"main\", {}, [(0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"h1\", {}, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(\"To do list\")), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"input\", {\n    type: \"text\",\n    oninput: NewValue,\n    value\n  }), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"ul\", {}, todos.map(todo => (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"li\", {}, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(todo)))), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"button\", {\n    onclick: AddTodo\n  }, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(\"New!\"))]),\n  node: document.querySelector(\".app\")\n});\n\n//# sourceURL=webpack://webpack-kit-2026/./assets/js/hyper/app.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var hyperapp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hyperapp */ \"./node_modules/hyperapp/index.js\");\n/* harmony import */ var _state_globalState_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./state/globalState.js */ \"./assets/js/hyper/state/globalState.js\");\n/* harmony import */ var _components_todoapp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/todoapp.js */ \"./assets/js/hyper/components/todoapp.js\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/main.scss */ \"./assets/styles/main.scss\");\n\n\n\n\nvar state = {\n  name: \"courtney\"\n};\n(0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.app)({\n  init: _state_globalState_js__WEBPACK_IMPORTED_MODULE_1__.globalState,\n  view: function view(state) {\n    return (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"main\", {}, [(0,_components_todoapp_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(state), console.log()]);\n  },\n  node: document.querySelector(\".app\")\n});\n\n//# sourceURL=webpack://webpack-kit-2026/./assets/js/hyper/app.js?\n}");
+
+/***/ },
+
+/***/ "./assets/js/hyper/components/todoapp.js"
+/*!***********************************************!*\
+  !*** ./assets/js/hyper/components/todoapp.js ***!
+  \***********************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ TaskList)\n/* harmony export */ });\n/* harmony import */ var hyperapp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hyperapp */ \"./node_modules/hyperapp/index.js\");\n/* harmony import */ var _actions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/index.js */ \"./assets/js/hyper/actions/index.js\");\n\n\nfunction TaskList(props) {\n  var name = props.name,\n    value = props.value;\n  return (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"div\", {\n    \"class\": \"todo\"\n  }, [(0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"h1\", {\n    \"class\": \"todo__header\"\n  }, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(\"to do list\")), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"input\", {\n    \"class\": \"todo__text-input\",\n    type: \"text\",\n    oninput: _actions_index_js__WEBPACK_IMPORTED_MODULE_1__.NewValue,\n    value: value\n  }), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"ul\", {\n    \"class\": \"todo__list\"\n  }, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"li\", {\n    \"class\": \"todo__list-item\"\n  }, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(name))), (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.h)(\"button\", {\n    \"class\": \"todo__submit-btn\",\n    onclick: _actions_index_js__WEBPACK_IMPORTED_MODULE_1__.AddTodo\n  }, (0,hyperapp__WEBPACK_IMPORTED_MODULE_0__.text)(\"Add Task\"))]);\n}\n\n//# sourceURL=webpack://webpack-kit-2026/./assets/js/hyper/components/todoapp.js?\n}");
+
+/***/ },
+
+/***/ "./assets/js/hyper/state/globalState.js"
+/*!**********************************************!*\
+  !*** ./assets/js/hyper/state/globalState.js ***!
+  \**********************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   globalState: () => (/* binding */ globalState)\n/* harmony export */ });\nvar globalState = {\n  name: \"courtney\",\n  value: \"wash clothes\",\n  todos: []\n};\n\n//# sourceURL=webpack://webpack-kit-2026/./assets/js/hyper/state/globalState.js?\n}");
 
 /***/ },
 
