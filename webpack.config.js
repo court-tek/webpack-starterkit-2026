@@ -25,6 +25,7 @@ export default {
         ]
     },
   devServer: {
+    hot: true,
     static: {
       directory: path.join(__dirname, "public"),
     },

@@ -1,9 +1,3 @@
-function test(name) {
-    return function(data) {
-        return `${name} ${data}`
-    }
-}
-
 // Todo App actions
 export const AddTodo = (state) => ({
     ...state,
@@ -16,5 +10,29 @@ export const NewValue = (state, event) => ({
     value: event.target.value,
 })
 
-// export default aSentence = test('courtney');
+// State Machine Tutorial
+export const Start = (state) => ({
+    ...state,
+    mode: state === "stopped" ? "running" : state
+})
 
+export const Pause = (state) => ({
+    ...state,
+    mode: state === "running" ? "paused" : state
+})
+
+export const Continue = (state) => ({
+    ...state,
+    mode: state === "paused" ? "running" : state
+})
+
+export const Cancel = (state) => ({
+    ...state,
+    mode: "stopped"
+})
+
+function test(name) {
+    return function(data) {
+        return `${name} ${data}`
+    }
+}
