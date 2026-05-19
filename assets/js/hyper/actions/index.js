@@ -13,17 +13,17 @@ export const NewValue = (state, event) => ({
 // State Machine Tutorial
 export const Start = (state) => ({
     ...state,
-    mode: state === "stopped" ? "running" : state
+    mode: state.mode === "stopped" ? "running" : state
 })
 
 export const Pause = (state) => ({
     ...state,
-    mode: state === "running" ? "paused" : state
+    mode: state.mode === "running" ? "paused" : state
 })
 
 export const Continue = (state) => ({
     ...state,
-    mode: state === "paused" ? "running" : state
+    mode: state.mode === "paused" ? "running" : state
 })
 
 export const Cancel = (state) => ({
