@@ -9,6 +9,7 @@
     view: state =>
       h("main", {}, [
         Timer(state), 
+        h("h1", {class: "header"}, text("one love"))
       ]),
     node: document.querySelector(".app"),
   })

@@ -1,14 +1,17 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-    entry: "./assets/js/hyper/app.js",
+    entry: {
+        bundle: "./assets/js/hyper/app.js"
+    },
     output: {
-        path: path.resolve(__dirname, "./public/dist"),
-        filename: "bundle.js"
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name][contenthash].js"
     },
     module: {
         rules: [
@@ -23,11 +26,18 @@ export default {
             }
         ]
     },
-  devServer: {
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: "Webpack Starter-kit 2026",
+            filename: "index.html",
+            template: 'public/template.html',
+        })
+    ],
+    devServer: {
         port: 8080,
-        static: path.join(__dirname, "public"),
+        static: path.join(__dirname, "dist"),
         hot: true,
         compress: true,
-  },
+    },
   mode: "development"
 };
