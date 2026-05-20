@@ -7,7 +7,7 @@
   "scripts": {
     "start:dev": "webpack-dev-server",
     "build": "webpack",
-    "start": "concurrently \"gulp\" \"webpack --watch\" \"webpack-dev-server\""
+    "start": "concurrently \"gulp\" \"webpack --watch\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "browser-sync": "^3.0.4",
     "concurrently": "^9.2.1",
     "gulp": "^5.0.1",
+    "gulp-shell": "^0.8.0",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-stream": "^7.0.0"

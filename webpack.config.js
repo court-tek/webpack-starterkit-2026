@@ -5,7 +5,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-    mode: "development",
     entry: "./assets/js/hyper/app.js",
     output: {
         path: path.resolve(__dirname, "./public/dist"),
@@ -25,11 +24,10 @@ export default {
         ]
     },
   devServer: {
-    hot: true,
-    static: {
-      directory: path.join(__dirname, "public"),
-    },
-    compress: true,
-    port: 9000,
+        port: 8080,
+        static: path.join(__dirname, "public"),
+        hot: true,
+        compress: true,
   },
+  mode: "development"
 };

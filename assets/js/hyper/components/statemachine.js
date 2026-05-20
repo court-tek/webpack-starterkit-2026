@@ -14,7 +14,7 @@ export default function Timer(props) {
                 ? h("button", {class: "machine__continue-btn", onclick: Continue}, text("continue"))
                 : h("button", {class: "machine__paused-btn", onclick: Pause}, text("pause")),
             ]),
-            h("div", {class: "machine__mode"}, [text(`Current state: ${mode}`)])
+            h("div", {class: "machine__mode"}, [text(`Current state: california`)]),
         ])
     )
 }
