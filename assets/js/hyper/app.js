@@ -1,5 +1,6 @@
   import { h, text, app } from "hyperapp";
   import { globalState } from "./state/globalState.js";
+  import Welcome from "./components/welcome.js";
   import TaskList from "./components/todoapp.js";
   import Timer from "./components/statemachine.js";
   import "../../styles/main.scss";
@@ -8,8 +9,7 @@
     init: globalState,
     view: state =>
       h("main", {}, [
-        Timer(state), 
-        h("h1", {class: "header"}, text("one love"))
+        Welcome(state),
       ]),
     node: document.querySelector(".app"),
   })

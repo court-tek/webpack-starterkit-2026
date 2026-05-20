@@ -2,6 +2,61 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background: #59CDE9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0A2A88, #59CDE9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0A2A88, #59CDE9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-optical-sizing: auto;
-    background-color: #0000ff;
+    line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 50px;
+  color: #fff;
+}
+
+#app {
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .welcome {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  a {
+    text-decoration: none;
+    color: #30395C;
+    transition: all 0.3s ease-in-out;
+    text-align: right;
+  }
+  a:hover {
+    color: #43D4D6;
+  }
 }
