@@ -2,7 +2,7 @@ import { h, text } from "hyperapp";
 import { Start, Cancel, Continue, Pause } from "../actions/index.js";
 
 export default function Timer(props) {
-    const {  mode } = props;
+    const {  mode, remainingTime } = props;
     return (
         h("div", {class: "machine"}, [
             h("div", {class: "machine__button-container"}, [
@@ -14,7 +14,8 @@ export default function Timer(props) {
                 ? h("button", {class: "machine__continue-btn", onclick: Continue}, text("continue"))
                 : h("button", {class: "machine__paused-btn", onclick: Pause}, text("pause")),
             ]),
-            h("div", {class: "machine__mode"}, [text(`Current state: california`)]),
+            remainingTime && h("p", {}, text(`Remaining: ${remainingTime}ms`)),
+            h("div", {class: "machine__mode"}, [text(`Current state: ${mode}`)]),
         ])
     )
 }

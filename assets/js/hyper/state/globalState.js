@@ -27,5 +27,14 @@ export const globalState = {
             rating: 4.36
         },
     ],
-    mode: "stopped"
+    movies: [
+        "The Fantasic Mr. Fox",
+        "Mr. and Mrs Smith",
+        "New Jack City",
+        "Collateral",
+        "Matrix Revolutions",
+        "Kill Bill Volume 1"
+    ],
+    // State Machine App
+    mode: "stopped",
 }
