@@ -1,5 +1,6 @@
 export const globalState = {
     title: "Hyperapp Starter Kit",
+    myName: "courtney",
     value: "",
     todos: [],
     texts: ['rofl', 'lol', 'omg', 'ttyl'],

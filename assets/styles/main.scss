@@ -24,36 +24,7 @@ body {
     }
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-h1 {
-  font-weight: 200;
-  font-size: 50px;
-  color: #fff;
-}
-
-#app {
+.app {
   height: 100vh;
   width: 100%;
   display:flex;
@@ -64,14 +35,22 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-  }
-  a {
-    text-decoration: none;
-    color: #30395C;
-    transition: all 0.3s ease-in-out;
-    text-align: right;
-  }
-  a:hover {
-    color: #43D4D6;
+
+    &__header {
+      font-weight: 200;
+      font-size: 50px;
+      color: #fff;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #30395C;
+      transition: all 0.3s ease-in-out;
+      text-align: right;
+    }
+
+    &__link--hover:hover {
+      color: #43D4D6;
+    }
   }
 }

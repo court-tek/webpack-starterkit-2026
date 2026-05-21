@@ -15,8 +15,7 @@
     init: globalState,
     view: state => (
       <div>
-        <h1>Hi there</h1>
-        <ColtComponent data={state} />
+        <Welcome data={state} />
       </div>
     ),
     node: document.querySelector(".app"),
