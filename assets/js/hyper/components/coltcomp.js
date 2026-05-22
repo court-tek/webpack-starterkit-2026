@@ -12,15 +12,10 @@ export default function ColtComponent(state) {
     const cenimaSearch = movies.find(function(param) {
         return param.indexOf("Kill") === 0
     })
-
-    
     return (
         <div>
             <div>
                 {movieSearch}
-            </div>
-            <div>
-                {cenimaSearch}
             </div>
         </div>
     )

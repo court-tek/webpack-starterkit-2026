@@ -14,7 +14,7 @@
   app({
     init: globalState,
     view: state => (
-      <div>
+      <div className="main">
         <Welcome data={state} />
       </div>
     ),
