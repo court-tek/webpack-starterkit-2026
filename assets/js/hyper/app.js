@@ -9,8 +9,6 @@
 
   const jsx = jsxify(h) /** @jsx jsx */
 
-
-
   app({
     init: globalState,
     view: state => (

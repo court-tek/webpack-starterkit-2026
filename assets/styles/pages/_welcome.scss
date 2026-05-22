@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  @include gradient-hyper-blue;
+  background-size: 400% 400%;
+  background-position: 400%;
+  animation: gradient 15s ease infinite;
+  
+    @keyframes gradient {
+        0% {
+            background-position: 0%;
+        }
+        50% {
+            background-position: 100%;
+        }
+        100% {
+            background-position: 0% ;
+        }
+    }
+
+    .welcome {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        &__header {
+            font-weight: 200;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: #30395C;
+            transition: all 0.3s ease-in-out;
+            text-align: right;
+        }
+
+        &__link--hover:hover {
+            color: #fff;
+        }
+    }
+}
