@@ -36,6 +36,7 @@ export const globalState = {
         "Matrix Revolutions",
         "Kill Bill Volume 1"
     ],
+    reviews: [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5],
     // State Machine App
     mode: "stopped",
 }
