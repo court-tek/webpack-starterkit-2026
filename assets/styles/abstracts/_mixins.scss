@@ -1,6 +1,15 @@
 @use './colors' as *;
-// break points
+@use './variables' as *;
+@use "sass:map";
 
+// Media Query
+@mixin mq($key) {
+    $size: map.get($kevin-breakpoints, $key);
+
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
 // gradients
 @mixin gradient-pizelex {
     background: var(--clr-teal-blue-900); /* fallback for old browsers */
