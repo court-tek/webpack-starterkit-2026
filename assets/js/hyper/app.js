@@ -13,7 +13,7 @@
     init: globalState,
     view: state => (
       <div className="main">
-        <Welcome data={state} />
+        <ColtComponent data={state} />
       </div>
     ),
     node: document.querySelector(".app"),

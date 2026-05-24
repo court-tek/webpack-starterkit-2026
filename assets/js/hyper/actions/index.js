@@ -1,4 +1,10 @@
 // Todo App actions
+export const AddHashTag = (state) => ({
+    ...state,
+    value: "",
+    annoyingHashTags: state.annoyingHashTags.add(state.value),
+})
+
 export const AddTodo = (state) => ({
     ...state,
     value: "",

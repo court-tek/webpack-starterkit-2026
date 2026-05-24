@@ -34,9 +34,12 @@ export const globalState = {
         "New Jack City",
         "Collateral",
         "Matrix Revolutions",
-        "Kill Bill Volume 1"
+        "Kill Bill Volume 1",
+        "Meteor Man",
+        "Undercover Brother"
     ],
     reviews: [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5],
+    annoyingHashTags: new Set(["#selfie", "#nofilter"]),
     // State Machine App
     mode: "stopped",
 }
