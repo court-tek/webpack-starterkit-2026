@@ -1,4 +1,33 @@
+// import { BillsManager, Grid, Home, TaskManager, Tutorial } from "../actions";
+
 export const globalState = {
+    // routing system
+    location: 'home',
+    menu: [
+        {
+            page: "home",
+            func: "Home"
+        },
+        {
+            page: "hyperapp tutorial",
+            func: "Tutorial"
+        },
+        {
+            page: "css grid",
+            func: "Grid"
+        },
+        {
+            page: "task manager",
+            func: "TaskManager"
+        },
+        {
+            page: "bills manager",
+            func: "BillsManager" 
+        },
+    ],
+
+    // test state
+    colors: ['#FF5722', '#FF9800', '#FFC107', '#FFEB3B', '#CDDC39', '#8BC34A', '#4CFF50', '#009688', '#03A9F4', '#3F51B5'],
     title: "Hyperapp Starter Kit",
     myName: "courtney",
     value: "",

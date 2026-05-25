@@ -1,9 +1,5 @@
 // Todo App actions
-export const AddHashTag = (state) => ({
-    ...state,
-    value: "",
-    annoyingHashTags: state.annoyingHashTags.add(state.value),
-})
+
 
 export const AddTodo = (state) => ({
     ...state,
@@ -16,44 +12,62 @@ export const NewValue = (state, event) => ({
     value: event.target.value,
 })
 
-// State Machine Tutorial
-const DURATION = 15000;
-
-export const Start = (state, event) => (
-    state.mode === "stopped" 
-    ? {
-        ...state,
-        mode: "running",
-        startedTime: event.timeStamp,
-        remainingTime: DURATION,
-        duration: DURATION
-    }
-    : state
-)
-
-export const Pause = (state) => (
-    state.mode === "running"
-    ? {
-        ...state,
-        mode: "paused"
-    }
-    : state
-)
-
-export const Continue = (state, event) => (
-    state.mode === "paused"
-    ? {
-        ...state,
-        mode: "running",
-        startedTime: event.timeStamp,
-        duration: state.remainingTime
-    }
-    : state
-)
-
-export const Cancel = (state) => ({
+// Routing system actions
+export const changeLocation = (state) => ({
     ...state,
-    mode: "stopped"
+    location: state.location
+})
+
+export const Home = (state) => (
+    state.mode != "home" 
+    ? {
+        ...state,
+        location: "home",
+    }
+    : state
+)
+
+export const Tutorial = (state) => (
+    state.mode != "hyperapp tutorial" 
+    ? {
+        ...state,
+        location: "hyperapp tutorial",
+    }
+    : state
+)
+
+export const Grid = (state) => (
+    state.mode != "css grid" 
+    ? {
+        ...state,
+        location: "css grid",
+    }
+    : state
+)
+
+export const TaskManager = (state) => (
+    state.mode != "task manager" 
+    ? {
+        ...state,
+        location: "task manager",
+    }
+    : state
+)
+
+export const BillsManager = (state) => (
+    state.mode != "bills manager" 
+    ? {
+        ...state,
+        location: "bills manager",
+    }
+    : state
+)
+
+// Miscellaneous actions donde eatan
+export const AddHashTag = (state) => ({
+    ...state,
+    value: "",
+    annoyingHashTags: state.annoyingHashTags.add(state.value),
 })
 
 function test(name) {

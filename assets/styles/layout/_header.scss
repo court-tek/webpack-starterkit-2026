@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    &__item {
+        margin-right: 12px;
+        text-transform: capitalize;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

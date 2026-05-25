@@ -3,10 +3,10 @@ import {  } from "../actions/index.js";
 import { jsxify } from "../config/utilities.js";
 const jsx = jsxify(h) /** @jsx jsx */
 
-export default function Hyperlist(state) {
+export default function TaskManager(state) {
     return (
-        <div className="person">
-            <h1>Hyperapp tutorial</h1>
+        <div className="template">
+            <h1>Task Manager App Page.</h1>
         </div>  
     )
 }
